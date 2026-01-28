@@ -2,4 +2,4 @@ _config.yml
 
 title: innershell labs
 description: Deep security reviews, systems analysis, and adversarial thinking on complex infrastructures.
-theme: minima
+theme: hacker
