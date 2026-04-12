@@ -7,7 +7,7 @@ title: "Why Authorization Fails Before Enforcement"
 
 ## Introduction
 
-Over the past years, and especially through hands-on offensive security work, I’ve found myself spending less time looking for isolated technical vulnerabilities, and more time trying to understand how systems are actually designed — and how those design decisions can be used against them.
+Over the past years, and especially through hands-on offensive security work, I’ve found myself spending less time looking for isolated technical vulnerabilities, and more time trying to understand how systems are actually designed and how those design decisions can be used against them.
 
 There has been a clear shift.
 
