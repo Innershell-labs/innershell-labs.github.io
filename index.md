@@ -13,9 +13,10 @@ This site documents work and learning across areas such as:
 - Trust boundaries in distributed architectures
 - Business logic abuse and adversarial behavior
 - Detection, risk, and security feedback loops
+- Advanced Tech vulnerabilities
 
 From time to time, I also share learning progress, technical insights, and informed opinions
-derived from hands-on experience and ongoing research.
+derived from hands-on experience and ongoing personal research.
 
 → Learn more [About](/about)  
 → Explore current [Research](/research)  
