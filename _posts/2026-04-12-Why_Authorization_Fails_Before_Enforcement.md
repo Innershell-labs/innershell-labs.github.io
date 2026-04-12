@@ -46,11 +46,11 @@ Modern systems rely on a variety of approaches to implement these:
 - **Session-based authentication**  
   - Pros: strong server-side control, easy revocation  
   - Cons: requires centralized state, harder to scale  
-
+  
 - **Token-based authentication (e.g., JWT)**  
   - Pros: scalable, portable across services  
   - Cons: introduces stale identity, difficult revocation, hidden state  
-
+  
 - **Stateful vs Stateless approaches**  
   - Stateless systems aim to remove server-side state  
   - In practice, they reintroduce state through:
@@ -64,15 +64,15 @@ Modern systems rely on a variety of approaches to implement these:
 - **RBAC (Role-Based Access Control)**  
   - Pros: simple, widely adopted  
   - Cons: role explosion, lack of context  
-
+  
 - **ABAC (Attribute-Based Access Control)**  
   - Pros: flexible, context-aware  
   - Cons: complex evaluation, hard to reason about  
-
+  
 - **ReBAC (Relationship-Based Access Control)**  
   - Pros: models real-world relationships (e.g., Google Zanzibar)  
   - Cons: graph complexity, performance and consistency challenges  
-
+  
 - **Policy-based systems**  
   - Pros: centralized logic, expressive rules  
   - Cons: requires strict discipline and consistency across services  
