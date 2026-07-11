@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title desc">
+  <title id="title">Access Matrix Security Logo</title>
+  <desc id="desc">Minimal access-control matrix mark with one privileged red node.</desc>
+  <rect width="128" height="128" fill="none"/>
+  <path d="M22 26h84v76H22z" fill="#090b0f" rx="10"/>
+  <path d="M38 42h52M38 64h52M38 86h52M42 38v52M64 38v52M86 38v52" stroke="#ffffff" stroke-width="5" stroke-linecap="round" opacity=".92"/>
+  <circle cx="42" cy="42" r="6" fill="#ffffff"/>
+  <circle cx="64" cy="42" r="6" fill="#ffffff"/>
+  <circle cx="86" cy="42" r="6" fill="#ffffff"/>
+  <circle cx="42" cy="64" r="6" fill="#ffffff"/>
+  <circle cx="64" cy="64" r="7" fill="#e1191d"/>
+  <circle cx="86" cy="64" r="6" fill="#ffffff"/>
+  <circle cx="42" cy="86" r="6" fill="#ffffff"/>
+  <circle cx="64" cy="86" r="6" fill="#ffffff"/>
+  <circle cx="86" cy="86" r="6" fill="#ffffff"/>
+  <path d="M64 64l22-22M64 64l22 22M64 64H42" stroke="#e1191d" stroke-width="5" stroke-linecap="round"/>
+  <path d="M22 102h84" stroke="#e1191d" stroke-width="8" stroke-linecap="round"/>
+</svg>
