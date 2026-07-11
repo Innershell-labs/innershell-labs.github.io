@@ -13,78 +13,147 @@
   </title>
 
   <meta name="description" content="{{ page.description | default: site.description | escape }}" />
+  <meta name="theme-color" content="#0b0d10" />
 
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 </head>
 
-<body>
+<body class="{% if page.layout == 'post' %}is-post{% else %}is-page{% endif %}">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
   <header class="site-header">
-    <div class="site-shell">
-      <div class="header-card">
-        <div class="site-brand">
-          <a class="site-title" href="{{ '/' | relative_url }}">
-            {{ site.title }}
-          </a>
-
-          {% if site.description %}
-            <div class="site-description">
-              {{ site.description }}
-            </div>
-          {% endif %}
-        </div>
-
-        <nav class="site-nav" aria-label="Main navigation">
-          <a href="{{ '/' | relative_url }}" {% if page.url == '/' %}aria-current="page"{% endif %}>
-            Home
-          </a>
-
-          <a href="{{ '/about' | relative_url }}" {% if page.url contains '/about' %}aria-current="page"{% endif %}>
-            About
-          </a>
-
-          <a href="{{ '/research' | relative_url }}" {% if page.url contains '/research' %}aria-current="page"{% endif %}>
-            Research
-          </a>
-
-          <a href="{{ '/blog' | relative_url }}" {% if page.url contains '/blog' or page.layout == 'post' %}aria-current="page"{% endif %}>
-            Blog
-          </a>
-        </nav>
+    <div class="top-strip">
+      <div class="site-shell top-strip-inner">
+        <span>Security Research / Portfolio / Publications</span>
+        <span>{{ site.title }}</span>
       </div>
+    </div>
+
+    <div class="site-shell header-inner">
+      <a class="site-brand" href="{{ '/' | relative_url }}" aria-label="{{ site.title }}">
+        <span class="brand-mark" aria-hidden="true">01</span>
+        <span class="brand-text">
+          <strong>{{ site.title }}</strong>
+          {% if site.description %}
+            <small>{{ site.description }}</small>
+          {% endif %}
+        </span>
+      </a>
+
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="{{ '/' | relative_url }}" {% if page.url == '/' %}aria-current="page"{% endif %}>Home</a>
+        <a href="{{ '/about' | relative_url }}" {% if page.url contains '/about' %}aria-current="page"{% endif %}>About</a>
+        <a href="{{ '/research' | relative_url }}" {% if page.url contains '/research' %}aria-current="page"{% endif %}>Research</a>
+        <a href="{{ '/blog' | relative_url }}" {% if page.url contains '/blog' or page.layout == 'post' %}aria-current="page"{% endif %}>Blog</a>
+      </nav>
     </div>
   </header>
 
-  <main class="content-shell">
+  <main id="main-content" class="site-main">
     {% if page.layout == 'post' %}
-      <article class="post-content">
-        <h1>{{ page.title }}</h1>
+      <div class="site-shell article-layout">
+        <article class="post-content">
+          <header class="post-hero">
+            <p class="eyebrow">Security Publication</p>
 
-        {% if page.date %}
-          <div class="post-meta">
-            <span>{{ page.date | date: "%B %-d, %Y" }}</span>
+            <h1>{{ page.title }}</h1>
+
+            <div class="post-meta">
+              {% if page.date %}
+                <span>{{ page.date | date: "%B %-d, %Y" }}</span>
+              {% endif %}
+
+              {% if page.author %}
+                <span>{{ page.author }}</span>
+              {% elsif site.author %}
+                <span>{{ site.author }}</span>
+              {% endif %}
+
+              {% if page.categories and page.categories.size > 0 %}
+                <span>{{ page.categories | join: " / " }}</span>
+              {% endif %}
+            </div>
+
+            {% if page.description %}
+              <p class="post-summary">{{ page.description }}</p>
+            {% endif %}
+          </header>
+
+          {% if page.image %}
+            <figure class="post-cover">
+              <img src="{{ page.image | relative_url }}" alt="{{ page.title | escape }}">
+            </figure>
+          {% endif %}
+
+          <div class="prose">
+            {{ content }}
           </div>
-        {% endif %}
+        </article>
 
-        {{ content }}
-      </article>
+        <aside class="article-sidebar" aria-label="Related content">
+          <section class="sidebar-block">
+            <h2>Latest Posts</h2>
+
+            <ol class="latest-list">
+              {% for post in site.posts limit: 5 %}
+                <li>
+                  <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+                  <time datetime="{{ post.date | date_to_xmlschema }}">
+                    {{ post.date | date: "%b %-d, %Y" }}
+                  </time>
+                </li>
+              {% endfor %}
+            </ol>
+          </section>
+
+          {% if page.tags and page.tags.size > 0 %}
+            <section class="sidebar-block">
+              <h2>Tags</h2>
+              <div class="tag-list">
+                {% for tag in page.tags %}
+                  <span>{{ tag }}</span>
+                {% endfor %}
+              </div>
+            </section>
+          {% endif %}
+        </aside>
+      </div>
     {% else %}
-      <section class="page-content">
+      <section class="page-hero">
+        <div class="site-shell page-hero-inner">
+          <p class="eyebrow">Security Engineering</p>
+
+          <h1>
+            {% if page.title %}
+              {{ page.title }}
+            {% else %}
+              {{ site.title }}
+            {% endif %}
+          </h1>
+
+          {% if page.description %}
+            <p>{{ page.description }}</p>
+          {% elsif site.description %}
+            <p>{{ site.description }}</p>
+          {% endif %}
+        </div>
+      </section>
+
+      <section class="site-shell page-content prose">
         {{ content }}
       </section>
     {% endif %}
   </main>
 
   <footer class="site-footer">
-    <div class="footer-inner">
-      <span>
-        {{ site.title }} · Security Engineering, Offensive Security and Risk-Driven Research
-      </span>
+    <div class="site-shell footer-inner">
+      <p>{{ site.title }} · Security Engineering, Offensive Security and Risk-Driven Research</p>
 
-      <span>
+      <nav aria-label="Footer navigation">
         <a href="{{ '/' | relative_url }}">Home</a>
-        ·
+        <a href="{{ '/research' | relative_url }}">Research</a>
         <a href="{{ '/blog' | relative_url }}">Blog</a>
-      </span>
+      </nav>
     </div>
   </footer>
 </body>
