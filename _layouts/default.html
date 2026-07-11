@@ -49,18 +49,9 @@
 
         <span class="brand-text">
           <strong>{{ site.title }}</strong>
-        
-          {% unless page.layout == 'post' %}
-            <small>
-              {% if page.url == '/' or page.url == '/index.html' %}
-                Deep security reviews, systems analysis, and adversarial thinking on complex infrastructures.
-              {% elsif page.header_description %}
-                {{ page.header_description }}
-              {% else %}
-                Page-specific security research placeholder. Replace this text with a short description for this section.
-              {% endif %}
-            </small>
-          {% endunless %}
+          {% if site.description %}
+            <small>{{ site.description }}</small>
+          {% endif %}
         </span>
 
       <nav class="site-nav" aria-label="Main navigation">
@@ -154,11 +145,17 @@
             {% endif %}
           </h1>
 
-          {% if page.description %}
-            <p>{{ page.description }}</p>
-          {% elsif site.description %}
-            <p>{{ site.description }}</p>
-          {% endif %}
+          {% unless page.layout == 'post' %}
+            {% if page.url == '/' or page.url == '/index.html' %}
+              {% if site.description %}
+                <p>{{ site.description }}</p>
+              {% endif %}
+            {% elsif page.hero_description %}
+              <p>{{ page.hero_description }}</p>
+            {% else %}
+              <p>Placeholder text for this section. Replace this with a short description for the current page.</p>
+            {% endif %}
+          {% endunless %}
         </div>
       </section>
 
