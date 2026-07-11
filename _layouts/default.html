@@ -49,11 +49,19 @@
 
         <span class="brand-text">
           <strong>{{ site.title }}</strong>
-          {% if site.description %}
-            <small>{{ site.description }}</small>
-          {% endif %}
+        
+          {% unless page.layout == 'post' %}
+            <small>
+              {% if page.url == '/' or page.url == '/index.html' %}
+                Deep security reviews, systems analysis, and adversarial thinking on complex infrastructures.
+              {% elsif page.header_description %}
+                {{ page.header_description }}
+              {% else %}
+                Page-specific security research placeholder. Replace this text with a short description for this section.
+              {% endif %}
+            </small>
+          {% endunless %}
         </span>
-      </a>
 
       <nav class="site-nav" aria-label="Main navigation">
         <a href="{{ '/' | relative_url }}" {% if page.url == '/' %}aria-current="page"{% endif %}>Home</a>
