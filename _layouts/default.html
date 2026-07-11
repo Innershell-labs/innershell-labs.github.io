@@ -30,8 +30,23 @@
     </div>
 
     <div class="site-shell header-inner">
+      {% assign logo_path = site.logo | default: '' %}
+
       <a class="site-brand" href="{{ '/' | relative_url }}" aria-label="{{ site.title }}">
-        <span class="brand-mark" aria-hidden="true">01</span>
+        {% if logo_path != '' %}
+          <img
+            class="brand-logo"
+            src="{{ logo_path | relative_url }}"
+            alt=""
+            width="44"
+            height="44"
+          >
+        {% else %}
+          <span class="brand-logo-placeholder" aria-hidden="true">
+            <span class="logo-mark-core"></span>
+          </span>
+        {% endif %}
+
         <span class="brand-text">
           <strong>{{ site.title }}</strong>
           {% if site.description %}
@@ -147,7 +162,25 @@
 
   <footer class="site-footer">
     <div class="site-shell footer-inner">
-      <p>{{ site.title }} · Security Engineering, Research, Threat Intelligence, Risk Management</p>
+      {% assign footer_logo_path = site.footer_logo | default: site.logo | default: '' %}
+
+      <div class="footer-brand">
+        {% if footer_logo_path != '' %}
+          <img
+            class="footer-logo"
+            src="{{ footer_logo_path | relative_url }}"
+            alt=""
+            width="34"
+            height="34"
+          >
+        {% else %}
+          <span class="footer-logo-placeholder" aria-hidden="true">
+            <span class="logo-mark-core"></span>
+          </span>
+        {% endif %}
+
+        <p>{{ site.title }} &middot; Security Engineering, Research, Threat Intelligence, Risk Management</p>
+      </div>
 
       <nav aria-label="Footer navigation">
         <a href="{{ '/' | relative_url }}">Home</a>
