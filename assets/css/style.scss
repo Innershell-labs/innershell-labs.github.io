@@ -124,7 +124,7 @@ a:hover {
 .site-brand {
   display: inline-flex;
   align-items: center;
-  gap: 14px;
+  gap: 18px;
   color: var(--ink);
 }
 
@@ -135,8 +135,8 @@ a:hover {
 .brand-logo,
 .brand-logo-placeholder {
   flex: 0 0 auto;
-  width: 44px;
-  height: 44px;
+  width: 58px;
+  height: 58px;
 }
 
 .brand-logo {
@@ -596,14 +596,14 @@ a:hover {
 .footer-brand {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
 }
 
 .footer-logo,
 .footer-logo-placeholder {
   flex: 0 0 auto;
-  width: 34px;
-  height: 34px;
+  width: 42px;
+  height: 42px;
 }
 
 .footer-logo {
