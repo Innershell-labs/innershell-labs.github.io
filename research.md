@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Research
+hero_description: Structured analysis of offensive security, malware behavior, cyber threat intelligence, adversary operations, and corporate cyber risk.
 ---
 
 # Research
