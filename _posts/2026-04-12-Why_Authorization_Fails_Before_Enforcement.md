@@ -1,6 +1,7 @@
 ---
 layout: default
 title: "Why Authorization Fails Before Enforcement"
+lang : en
 ---
 
 # Why Authorization Fails Before Enforcement
