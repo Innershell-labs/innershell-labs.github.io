@@ -1,6 +1,7 @@
 ---
 layout: default
 title: About
+hero_description: Independent security research by Diego Concha, connecting offensive security, malware analysis, CTI, and risk management to understand real-world cyber impact.
 ---
 
 # About
