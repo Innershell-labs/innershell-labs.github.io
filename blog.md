@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Blog
+hero_description: Technical writing on Red Team, malware, threat intelligence, security reviews, risk, and adversarial thinking.
 ---
 
 # Blog
