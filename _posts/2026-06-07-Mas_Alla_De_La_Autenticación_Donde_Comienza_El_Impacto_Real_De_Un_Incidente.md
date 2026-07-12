@@ -1,6 +1,7 @@
 ---
 layout: default
 title: "Más allá de la autenticación: donde comienza el impacto real de un incidente"
+lang : es
 ---
 
 # Más allá de la autenticación: donde comienza el impacto real de un incidente
