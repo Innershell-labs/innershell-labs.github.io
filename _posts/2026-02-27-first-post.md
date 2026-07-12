@@ -1,6 +1,7 @@
 ---
 layout: default
 title: "First Post"
+lang : en
 ---
 
 # First Post
