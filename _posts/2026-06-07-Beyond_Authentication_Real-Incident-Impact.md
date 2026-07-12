@@ -1,6 +1,7 @@
 ---
 layout: default
 title: "Beyond Authentication: Where Real Incident Impact Begins"
+lang : en
 ---
 
 # Beyond Authentication: Where Real Incident Impact Begins
