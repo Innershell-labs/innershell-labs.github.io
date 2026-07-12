@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 820" role="img" aria-labelledby="title desc">
+  <title id="title">Authority Review Model</title>
+  <desc id="desc">A concise review model for how systems create, propagate, constrain, observe, and revoke authority.</desc>
+  <defs>
+    <style>
+      .center{font-family:Inter,Arial,sans-serif;font-size:28px;font-weight:900;fill:#fff}
+      .node{font-family:Inter,Arial,sans-serif;font-size:23px;font-weight:850;fill:#090b0f}
+      .sub{font-family:Inter,Arial,sans-serif;font-size:17px;font-weight:700;fill:#656b78}
+    </style>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="20" stdDeviation="18" flood-color="#090b0f" flood-opacity=".10"/>
+    </filter>
+  </defs>
+  <rect width="1400" height="820" fill="#f6f5f2"/>
+  <rect x="100" y="80" width="1200" height="660" rx="24" fill="#fff" filter="url(#shadow)"/>
+
+  <g transform="translate(700 410)">
+    <circle r="112" fill="#090b0f"/>
+    <circle r="52" fill="#e1191d"/>
+    <text y="-8" text-anchor="middle" class="center">Authority</text>
+    <text y="28" text-anchor="middle" class="center">Review</text>
+  </g>
+
+  <g stroke="#d9d6ce" stroke-width="5" stroke-linecap="round">
+    <path d="M700 298V188"/>
+    <path d="M792 350l136-88"/>
+    <path d="M792 470l136 88"/>
+    <path d="M608 470l-136 88"/>
+    <path d="M608 350l-136-88"/>
+  </g>
+
+  <g>
+    <g transform="translate(580 128)">
+      <rect width="240" height="96" rx="16" fill="#fff" stroke="#090b0f" stroke-width="4"/>
+      <text x="120" y="40" text-anchor="middle" class="node">Create</text>
+      <text x="120" y="68" text-anchor="middle" class="sub">identity, token, role</text>
+    </g>
+    <g transform="translate(944 218)">
+      <rect width="240" height="96" rx="16" fill="#fff" stroke="#090b0f" stroke-width="4"/>
+      <text x="120" y="40" text-anchor="middle" class="node">Propagate</text>
+      <text x="120" y="68" text-anchor="middle" class="sub">services, jobs, APIs</text>
+    </g>
+    <g transform="translate(944 506)">
+      <rect width="240" height="96" rx="16" fill="#fff0f0" stroke="#e1191d" stroke-width="4"/>
+      <text x="120" y="40" text-anchor="middle" class="node">Constrain</text>
+      <text x="120" y="68" text-anchor="middle" class="sub">scope, tenant, owner</text>
+    </g>
+    <g transform="translate(216 506)">
+      <rect width="240" height="96" rx="16" fill="#fff" stroke="#090b0f" stroke-width="4"/>
+      <text x="120" y="40" text-anchor="middle" class="node">Observe</text>
+      <text x="120" y="68" text-anchor="middle" class="sub">logs, traces, signals</text>
+    </g>
+    <g transform="translate(216 218)">
+      <rect width="240" height="96" rx="16" fill="#fff0f0" stroke="#e1191d" stroke-width="4"/>
+      <text x="120" y="40" text-anchor="middle" class="node">Revoke</text>
+      <text x="120" y="68" text-anchor="middle" class="sub">session, token, access</text>
+    </g>
+  </g>
+</svg>
