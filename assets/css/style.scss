@@ -880,3 +880,40 @@ a:hover {
     grid-template-columns: 1fr;
   }
 }
+
+:root {
+  --page-readable-width: 980px;
+}
+
+.page-hero-inner > .eyebrow,
+.page-hero-inner > h1,
+.page-hero-inner > p {
+  max-width: var(--page-readable-width);
+}
+
+.page-content {
+  width: min(calc(100% - 40px), var(--max-width));
+  max-width: var(--max-width);
+}
+
+.page-content.prose {
+  max-width: none;
+}
+
+.page-content.prose > * {
+  max-width: var(--page-readable-width);
+}
+
+.page-content.prose > h1,
+.page-content.prose > h2,
+.page-content.prose > h3,
+.page-content.prose > h4,
+.page-content.prose > p,
+.page-content.prose > ul,
+.page-content.prose > ol,
+.page-content.prose > blockquote,
+.page-content.prose > table,
+.page-content.prose > pre {
+  margin-left: 0;
+  margin-right: 0;
+}
