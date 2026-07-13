@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 820" role="img" aria-labelledby="title desc">
+  <title id="title">Authentication to Authorization Boundary</title>
+  <desc id="desc">Editorial security diagram showing that a successful login is not the final security boundary; authorization defines the real incident impact.</desc>
+  <defs>
+    <style>
+      .title{font-family:Inter,Arial,sans-serif;font-size:32px;font-weight:900;fill:#090b0f}
+      .label{font-family:Inter,Arial,sans-serif;font-size:26px;font-weight:850;fill:#090b0f}
+      .labelWhite{font-family:Inter,Arial,sans-serif;font-size:26px;font-weight:850;fill:#fff}
+      .sub{font-family:Inter,Arial,sans-serif;font-size:18px;font-weight:700;fill:#656b78}
+      .subWhite{font-family:Inter,Arial,sans-serif;font-size:18px;font-weight:700;fill:#c9ced8}
+      .small{font-family:Inter,Arial,sans-serif;font-size:16px;font-weight:850;fill:#fff}
+    </style>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="20" stdDeviation="18" flood-color="#090b0f" flood-opacity=".09"/>
+    </filter>
+  </defs>
+
+  <rect width="1400" height="820" fill="#f6f5f2"/>
+  <g opacity=".55" stroke="#e8e4da" stroke-width="1">
+    <path d="M0 80h1400M0 160h1400M0 240h1400M0 320h1400M0 400h1400M0 480h1400M0 560h1400M0 640h1400M0 720h1400"/>
+    <path d="M80 0v820M160 0v820M240 0v820M320 0v820M400 0v820M480 0v820M560 0v820M640 0v820M720 0v820M800 0v820M880 0v820M960 0v820M1040 0v820M1120 0v820M1200 0v820M1280 0v820"/>
+  </g>
+
+  <rect x="84" y="84" width="1232" height="652" rx="24" fill="#fff" filter="url(#shadow)"/>
+
+  <text x="132" y="148" class="title">When the login holds, the real question moves deeper</text>
+  <text x="132" y="188" class="sub">Authentication may accept the identity. Authorization determines what that identity can affect.</text>
+
+  <g transform="translate(132 268)">
+    <rect width="360" height="300" rx="20" fill="#090b0f"/>
+    <circle cx="180" cy="100" r="54" fill="#fff"/>
+    <circle cx="180" cy="78" r="17" fill="#090b0f"/>
+    <path d="M144 128c11-22 23-33 36-33s25 11 36 33" fill="none" stroke="#090b0f" stroke-width="9" stroke-linecap="round"/>
+    <path d="M128 176l32 32 76-82" fill="none" stroke="#e1191d" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="180" y="248" text-anchor="middle" class="labelWhite">Authentication</text>
+    <text x="180" y="278" text-anchor="middle" class="subWhite">identity accepted</text>
+  </g>
+
+  <g transform="translate(570 268)">
+    <rect width="260" height="300" rx="20" fill="#f6f5f2" stroke="#d9d6ce" stroke-width="2"/>
+    <text x="130" y="58" text-anchor="middle" class="label">Looks safe</text>
+    <g transform="translate(48 92)">
+      <rect width="164" height="42" rx="21" fill="#fff"/>
+      <text x="82" y="27" text-anchor="middle" class="sub">strong MFA</text>
+    </g>
+    <g transform="translate(48 152)">
+      <rect width="164" height="42" rx="21" fill="#fff"/>
+      <text x="82" y="27" text-anchor="middle" class="sub">valid session</text>
+    </g>
+    <g transform="translate(48 212)">
+      <rect width="164" height="42" rx="21" fill="#fff"/>
+      <text x="82" y="27" text-anchor="middle" class="sub">good login</text>
+    </g>
+  </g>
+
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M508 418h52M846 418h52" stroke="#090b0f" stroke-width="9"/>
+    <path d="M546 390l34 28-34 28M884 390l34 28-34 28" stroke="#090b0f" stroke-width="9"/>
+  </g>
+
+  <g transform="translate(916 220)">
+    <rect width="328" height="392" rx="20" fill="#fff0f0" stroke="#e1191d" stroke-width="3"/>
+    <circle cx="164" cy="132" r="34" fill="#e1191d"/>
+    <circle cx="164" cy="132" r="88" fill="none" stroke="#e1191d" stroke-width="5" opacity=".34"/>
+    <circle cx="164" cy="132" r="130" fill="none" stroke="#e1191d" stroke-width="5" opacity=".16"/>
+    <g stroke="#090b0f" stroke-width="5" stroke-linecap="round" opacity=".62">
+      <path d="M164 132V46"/>
+      <path d="M164 132l78-50"/>
+      <path d="M164 132l92 72"/>
+      <path d="M164 132l-84 86"/>
+      <path d="M164 132l-96-54"/>
+    </g>
+    <g fill="#090b0f">
+      <circle cx="164" cy="46" r="10"/>
+      <circle cx="242" cy="82" r="10"/>
+      <circle cx="256" cy="204" r="10"/>
+      <circle cx="80" cy="218" r="10"/>
+      <circle cx="68" cy="78" r="10"/>
+    </g>
+    <circle cx="164" cy="132" r="13" fill="#fff"/>
+    <text x="164" y="302" text-anchor="middle" class="label">Authorization</text>
+    <text x="164" y="334" text-anchor="middle" class="sub">blast radius</text>
+    <text x="164" y="360" text-anchor="middle" class="sub">and real impact</text>
+  </g>
+
+  <g transform="translate(286 642)">
+    <rect width="828" height="58" rx="29" fill="#090b0f"/>
+    <text x="414" y="37" text-anchor="middle" class="small">A valid identity should be treated as a constrained execution context.</text>
+  </g>
+</svg>

@@ -1,0 +1,133 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 820" role="img" aria-labelledby="title desc">
+  <title id="title">Authorization Surface vs API Surface</title>
+  <desc id="desc">A clean comparison showing a small visible API surface and a larger authorization surface made of distributed authority decisions.</desc>
+  <defs>
+    <style>
+      .panel-title{font-family:Inter,Arial,sans-serif;font-size:28px;font-weight:900;fill:#090b0f}
+      .panel-title-white{font-family:Inter,Arial,sans-serif;font-size:28px;font-weight:900;fill:#fff}
+      .muted{font-family:Inter,Arial,sans-serif;font-size:17px;font-weight:700;fill:#656b78}
+      .muted-white{font-family:Inter,Arial,sans-serif;font-size:17px;font-weight:700;fill:#c9ced8}
+      .route{font-family:Consolas,Menlo,monospace;font-size:19px;font-weight:800;fill:#fff}
+      .card-title{font-family:Inter,Arial,sans-serif;font-size:19px;font-weight:850;fill:#090b0f}
+      .card-sub{font-family:Inter,Arial,sans-serif;font-size:14px;font-weight:700;fill:#656b78}
+      .footer{font-family:Inter,Arial,sans-serif;font-size:18px;font-weight:850;fill:#fff}
+    </style>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="20" stdDeviation="18" flood-color="#090b0f" flood-opacity=".09"/>
+    </filter>
+  </defs>
+
+  <rect width="1400" height="820" fill="#f6f5f2"/>
+  <g opacity=".55" stroke="#e8e4da" stroke-width="1">
+    <path d="M0 80h1400M0 160h1400M0 240h1400M0 320h1400M0 400h1400M0 480h1400M0 560h1400M0 640h1400M0 720h1400"/>
+    <path d="M80 0v820M160 0v820M240 0v820M320 0v820M400 0v820M480 0v820M560 0v820M640 0v820M720 0v820M800 0v820M880 0v820M960 0v820M1040 0v820M1120 0v820M1200 0v820M1280 0v820"/>
+  </g>
+
+  <rect x="84" y="84" width="1232" height="652" rx="24" fill="#fff" filter="url(#shadow)"/>
+
+  <g transform="translate(132 160)">
+    <rect width="330" height="460" rx="22" fill="#090b0f"/>
+    <text x="165" y="66" text-anchor="middle" class="panel-title-white">API surface</text>
+    <text x="165" y="100" text-anchor="middle" class="muted-white">visible routes</text>
+
+    <g transform="translate(50 150)">
+      <rect width="230" height="58" rx="14" fill="#242832"/>
+      <text x="115" y="37" text-anchor="middle" class="route">POST /export</text>
+    </g>
+
+    <g transform="translate(50 232)">
+      <rect width="230" height="58" rx="14" fill="#242832"/>
+      <text x="115" y="37" text-anchor="middle" class="route">GET /reports</text>
+    </g>
+
+    <g transform="translate(50 314)">
+      <rect width="230" height="58" rx="14" fill="#242832"/>
+      <text x="115" y="37" text-anchor="middle" class="route">GET /files</text>
+    </g>
+  </g>
+
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M486 390h58" stroke="#e1191d" stroke-width="10"/>
+    <path d="M526 358l38 32-38 32" stroke="#e1191d" stroke-width="10"/>
+  </g>
+
+  <g transform="translate(586 132)">
+    <rect width="680" height="516" rx="22" fill="#fff0f0" stroke="#e1191d" stroke-width="3"/>
+    <text x="340" y="64" text-anchor="middle" class="panel-title">Authorization surface</text>
+    <text x="340" y="98" text-anchor="middle" class="muted">authority decisions distributed across the system</text>
+
+    <g transform="translate(44 136)">
+      <rect width="176" height="74" rx="14" fill="#fff" stroke="#d9d6ce" stroke-width="2"/>
+      <text x="88" y="34" text-anchor="middle" class="card-title">Token issuer</text>
+      <text x="88" y="56" text-anchor="middle" class="card-sub">who created it</text>
+    </g>
+
+    <g transform="translate(252 136)">
+      <rect width="176" height="74" rx="14" fill="#fff" stroke="#d9d6ce" stroke-width="2"/>
+      <text x="88" y="34" text-anchor="middle" class="card-title">Validation</text>
+      <text x="88" y="56" text-anchor="middle" class="card-sub">who trusts it</text>
+    </g>
+
+    <g transform="translate(460 136)">
+      <rect width="176" height="74" rx="14" fill="#fff" stroke="#d9d6ce" stroke-width="2"/>
+      <text x="88" y="34" text-anchor="middle" class="card-title">Scopes</text>
+      <text x="88" y="56" text-anchor="middle" class="card-sub">what they mean</text>
+    </g>
+
+    <g transform="translate(44 234)">
+      <rect width="176" height="74" rx="14" fill="#fff" stroke="#d9d6ce" stroke-width="2"/>
+      <text x="88" y="34" text-anchor="middle" class="card-title">Roles</text>
+      <text x="88" y="56" text-anchor="middle" class="card-sub">how mapped</text>
+    </g>
+
+    <g transform="translate(252 234)">
+      <rect width="176" height="74" rx="14" fill="#fff" stroke="#d9d6ce" stroke-width="2"/>
+      <text x="88" y="34" text-anchor="middle" class="card-title">Ownership</text>
+      <text x="88" y="56" text-anchor="middle" class="card-sub">resource match</text>
+    </g>
+
+    <g transform="translate(460 234)">
+      <rect width="176" height="74" rx="14" fill="#fff" stroke="#d9d6ce" stroke-width="2"/>
+      <text x="88" y="34" text-anchor="middle" class="card-title">Tenant</text>
+      <text x="88" y="56" text-anchor="middle" class="card-sub">boundary check</text>
+    </g>
+
+    <g transform="translate(44 332)">
+      <rect width="176" height="74" rx="14" fill="#fff" stroke="#d9d6ce" stroke-width="2"/>
+      <text x="88" y="34" text-anchor="middle" class="card-title">Service acct</text>
+      <text x="88" y="56" text-anchor="middle" class="card-sub">delegated power</text>
+    </g>
+
+    <g transform="translate(252 332)">
+      <rect width="176" height="74" rx="14" fill="#fff" stroke="#d9d6ce" stroke-width="2"/>
+      <text x="88" y="34" text-anchor="middle" class="card-title">Async job</text>
+      <text x="88" y="56" text-anchor="middle" class="card-sub">later execution</text>
+    </g>
+
+    <g transform="translate(460 332)">
+      <rect width="176" height="74" rx="14" fill="#fff" stroke="#d9d6ce" stroke-width="2"/>
+      <text x="88" y="34" text-anchor="middle" class="card-title">Storage link</text>
+      <text x="88" y="56" text-anchor="middle" class="card-sub">download access</text>
+    </g>
+
+    <g transform="translate(44 430)">
+      <rect width="176" height="50" rx="14" fill="#090b0f"/>
+      <text x="88" y="32" text-anchor="middle" class="footer">cache</text>
+    </g>
+
+    <g transform="translate(252 430)">
+      <rect width="176" height="50" rx="14" fill="#090b0f"/>
+      <text x="88" y="32" text-anchor="middle" class="footer">resource graph</text>
+    </g>
+
+    <g transform="translate(460 430)">
+      <rect width="176" height="50" rx="14" fill="#090b0f"/>
+      <text x="88" y="32" text-anchor="middle" class="footer">audit logs</text>
+    </g>
+  </g>
+
+  <g transform="translate(260 674)">
+    <rect width="880" height="46" rx="23" fill="#090b0f"/>
+    <text x="440" y="30" text-anchor="middle" class="footer">A single endpoint can trigger many authorization decisions after the request begins.</text>
+  </g>
+</svg>

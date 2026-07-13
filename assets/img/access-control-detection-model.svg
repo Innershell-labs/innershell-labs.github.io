@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 820" role="img" aria-labelledby="title desc">
+  <title id="title">Access Control Detection Model</title>
+  <desc id="desc">A clean diagram showing that access control is both a prevention decision and a detection problem based on behavior signals.</desc>
+  <defs>
+    <style>
+      .panel-title{font-family:Inter,Arial,sans-serif;font-size:28px;font-weight:900;fill:#090b0f}
+      .panel-title-white{font-family:Inter,Arial,sans-serif;font-size:28px;font-weight:900;fill:#fff}
+      .muted{font-family:Inter,Arial,sans-serif;font-size:18px;font-weight:700;fill:#656b78}
+      .muted-white{font-family:Inter,Arial,sans-serif;font-size:18px;font-weight:700;fill:#c9ced8}
+      .card-title{font-family:Inter,Arial,sans-serif;font-size:22px;font-weight:850;fill:#090b0f}
+      .card-sub{font-family:Inter,Arial,sans-serif;font-size:16px;font-weight:700;fill:#656b78}
+      .footer{font-family:Inter,Arial,sans-serif;font-size:18px;font-weight:850;fill:#fff}
+      .small-white{font-family:Inter,Arial,sans-serif;font-size:16px;font-weight:850;fill:#fff}
+    </style>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="20" stdDeviation="18" flood-color="#090b0f" flood-opacity=".09"/>
+    </filter>
+  </defs>
+
+  <rect width="1400" height="820" fill="#f6f5f2"/>
+  <g opacity=".55" stroke="#e8e4da" stroke-width="1">
+    <path d="M0 80h1400M0 160h1400M0 240h1400M0 320h1400M0 400h1400M0 480h1400M0 560h1400M0 640h1400M0 720h1400"/>
+    <path d="M80 0v820M160 0v820M240 0v820M320 0v820M400 0v820M480 0v820M560 0v820M640 0v820M720 0v820M800 0v820M880 0v820M960 0v820M1040 0v820M1120 0v820M1200 0v820M1280 0v820"/>
+  </g>
+
+  <rect x="84" y="84" width="1232" height="652" rx="24" fill="#fff" filter="url(#shadow)"/>
+
+  <g transform="translate(132 164)">
+    <rect width="360" height="474" rx="22" fill="#090b0f"/>
+    <text x="180" y="68" text-anchor="middle" class="panel-title-white">Prevention</text>
+    <text x="180" y="102" text-anchor="middle" class="muted-white">policy decision</text>
+
+    <g transform="translate(68 154)">
+      <rect width="224" height="72" rx="16" fill="#242832"/>
+      <text x="112" y="45" text-anchor="middle" class="small-white">request arrives</text>
+    </g>
+
+    <g transform="translate(68 258)">
+      <rect width="224" height="72" rx="16" fill="#fff"/>
+      <text x="112" y="34" text-anchor="middle" class="card-title">Allow / Deny</text>
+      <text x="112" y="58" text-anchor="middle" class="card-sub">point-in-time check</text>
+    </g>
+
+    <g transform="translate(68 362)">
+      <rect width="224" height="54" rx="27" fill="#e1191d"/>
+      <text x="112" y="35" text-anchor="middle" class="footer">allowed</text>
+    </g>
+
+    <g fill="none" stroke="#e1191d" stroke-width="8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M180 226v26"/>
+      <path d="M180 330v26"/>
+    </g>
+  </g>
+
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M516 402h68" stroke="#e1191d" stroke-width="10"/>
+    <path d="M564 370l38 32-38 32" stroke="#e1191d" stroke-width="10"/>
+  </g>
+
+  <g transform="translate(628 132)">
+    <rect width="640" height="538" rx="22" fill="#fff0f0" stroke="#e1191d" stroke-width="3"/>
+    <text x="320" y="66" text-anchor="middle" class="panel-title">Detection</text>
+    <text x="320" y="100" text-anchor="middle" class="muted">is this pattern expected for this identity?</text>
+
+    <g transform="translate(46 142)">
+      <rect width="250" height="86" rx="16" fill="#fff" stroke="#d9d6ce" stroke-width="2"/>
+      <circle cx="38" cy="43" r="13" fill="#e1191d"/>
+      <text x="70" y="37" class="card-title">Volume spike</text>
+      <text x="70" y="62" class="card-sub">hundreds of records</text>
+    </g>
+
+    <g transform="translate(344 142)">
+      <rect width="250" height="86" rx="16" fill="#fff" stroke="#d9d6ce" stroke-width="2"/>
+      <circle cx="38" cy="43" r="13" fill="#e1191d"/>
+      <text x="70" y="37" class="card-title">New domain</text>
+      <text x="70" y="62" class="card-sub">outside normal scope</text>
+    </g>
+
+    <g transform="translate(46 254)">
+      <rect width="250" height="86" rx="16" fill="#fff" stroke="#d9d6ce" stroke-width="2"/>
+      <circle cx="38" cy="43" r="13" fill="#e1191d"/>
+      <text x="70" y="37" class="card-title">Geo change</text>
+      <text x="70" y="62" class="card-sub">token used elsewhere</text>
+    </g>
+
+    <g transform="translate(344 254)">
+      <rect width="250" height="86" rx="16" fill="#fff" stroke="#d9d6ce" stroke-width="2"/>
+      <circle cx="38" cy="43" r="13" fill="#e1191d"/>
+      <text x="70" y="37" class="card-title">High impact</text>
+      <text x="70" y="62" class="card-sub">workflow triggered</text>
+    </g>
+
+    <g transform="translate(46 366)">
+      <rect width="250" height="86" rx="16" fill="#fff" stroke="#d9d6ce" stroke-width="2"/>
+      <circle cx="38" cy="43" r="13" fill="#e1191d"/>
+      <text x="70" y="37" class="card-title">Neighbor probe</text>
+      <text x="70" y="62" class="card-sub">tenant boundary test</text>
+    </g>
+
+    <g transform="translate(344 366)">
+      <rect width="250" height="86" rx="16" fill="#fff" stroke="#d9d6ce" stroke-width="2"/>
+      <circle cx="38" cy="43" r="13" fill="#e1191d"/>
+      <text x="70" y="37" class="card-title">Wrong audience</text>
+      <text x="70" y="62" class="card-sub">token used off-path</text>
+    </g>
+
+    <g transform="translate(164 478)">
+      <rect width="312" height="42" rx="21" fill="#090b0f"/>
+      <text x="156" y="28" text-anchor="middle" class="footer">signals of authorization abuse</text>
+    </g>
+  </g>
+
+  <g transform="translate(290 688)">
+    <rect width="820" height="46" rx="23" fill="#090b0f"/>
+    <text x="410" y="30" text-anchor="middle" class="footer">A permitted request can still be suspicious when the behavior does not match the identity.</text>
+  </g>
+</svg>

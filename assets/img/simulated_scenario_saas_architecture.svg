@@ -1,0 +1,267 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Simulated Scenario — Multi-tenant SaaS platform for financial reports</title>
+  <desc id="desc">Architecture flow diagram showing tenants, SSO, API Gateway, Reporting Service, Worker, Service Account, Cloud Storage and signed URLs.</desc>
+
+  <defs>
+    <linearGradient id="tenantA" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#eaf3ff"/>
+      <stop offset="100%" stop-color="#d9e9ff"/>
+    </linearGradient>
+    <linearGradient id="tenantB" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#e8fbf9"/>
+      <stop offset="100%" stop-color="#d8f3f0"/>
+    </linearGradient>
+    <linearGradient id="tenantC" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f1efff"/>
+      <stop offset="100%" stop-color="#e4e0fb"/>
+    </linearGradient>
+    <linearGradient id="softBlue" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f2f7ff"/>
+    </linearGradient>
+    <linearGradient id="softTeal" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#f0fbfa"/>
+    </linearGradient>
+
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="3" stdDeviation="6" flood-color="#0f3d7a" flood-opacity="0.12"/>
+    </filter>
+
+    <marker id="arrowBlue" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 Z" fill="#123d7a"/>
+    </marker>
+    <marker id="arrowTeal" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <path d="M0,0 L12,6 L0,12 Z" fill="#0b8d91"/>
+    </marker>
+
+    <style>
+      .title { font: 700 60px Arial, Helvetica, sans-serif; fill: #0f3d7a; }
+      .subtitle { font: 400 28px Arial, Helvetica, sans-serif; fill: #4a6482; }
+      .section { font: 700 23px Arial, Helvetica, sans-serif; fill: #0f3d7a; }
+      .stepnum { font: 700 26px Arial, Helvetica, sans-serif; fill: #ffffff; }
+      .steptext { font: 400 18px Arial, Helvetica, sans-serif; fill: #172b4d; }
+      .boxlabel { font: 700 22px Arial, Helvetica, sans-serif; fill: #172b4d; }
+      .small { font: 400 16px Arial, Helvetica, sans-serif; fill: #42526e; }
+      .tenantLabel { font: 700 21px Arial, Helvetica, sans-serif; }
+      .note { font: 700 27px Arial, Helvetica, sans-serif; fill: #163f79; }
+      .outlineBlue { fill: url(#softBlue); stroke: #1464d2; stroke-width: 2.2; }
+      .outlineTeal { fill: url(#softTeal); stroke: #0b8d91; stroke-width: 2.2; }
+      .flow { fill: none; stroke: #123d7a; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
+      .flowTeal { fill: none; stroke: #0b8d91; stroke-width: 4; stroke-linecap: round; stroke-linejoin: round; }
+      .returnFlow { fill: none; stroke: #1464d2; stroke-width: 3; stroke-dasharray: 10 8; stroke-linecap: round; stroke-linejoin: round; }
+    </style>
+  </defs>
+
+  <!-- background -->
+  <rect width="1600" height="900" fill="#ffffff"/>
+
+  <!-- header -->
+  <text x="800" y="72" text-anchor="middle" class="title">Simulated Scenario</text>
+  <text x="800" y="118" text-anchor="middle" class="subtitle">Multi-tenant SaaS platform for financial reports</text>
+
+  <!-- tenant section title -->
+  <text x="145" y="182" text-anchor="middle" class="section">
+    <tspan x="145" dy="0">Different companies</tspan>
+    <tspan x="145" dy="26">(tenants)</tspan>
+  </text>
+
+  <!-- tenants container -->
+  <rect x="34" y="220" width="240" height="530" rx="28" fill="none" stroke="#1464d2" stroke-width="2.2" stroke-dasharray="10 8"/>
+
+  <!-- Company A -->
+  <rect x="55" y="244" width="198" height="138" rx="18" fill="url(#tenantA)"/>
+  <text x="154" y="280" text-anchor="middle" class="tenantLabel" fill="#1f64c7">Company A</text>
+  <!-- user icons A -->
+  <circle cx="108" cy="324" r="11" fill="#2f6fc9"/>
+  <path d="M91 365 v-19 q0-12 17-12 q17 0 17 12 v19z" fill="#2f6fc9"/>
+  <circle cx="154" cy="315" r="14" fill="#2f6fc9"/>
+  <path d="M132 365 v-22 q0-15 22-15 q22 0 22 15 v22z" fill="#2f6fc9"/>
+  <circle cx="200" cy="324" r="11" fill="#2f6fc9"/>
+  <path d="M183 365 v-19 q0-12 17-12 q17 0 17 12 v19z" fill="#2f6fc9"/>
+
+  <!-- Company B -->
+  <rect x="55" y="405" width="198" height="138" rx="18" fill="url(#tenantB)"/>
+  <text x="154" y="441" text-anchor="middle" class="tenantLabel" fill="#0b8d91">Company B</text>
+  <circle cx="108" cy="485" r="11" fill="#20a5a7"/>
+  <path d="M91 526 v-19 q0-12 17-12 q17 0 17 12 v19z" fill="#20a5a7"/>
+  <circle cx="154" cy="476" r="14" fill="#20a5a7"/>
+  <path d="M132 526 v-22 q0-15 22-15 q22 0 22 15 v22z" fill="#20a5a7"/>
+  <circle cx="200" cy="485" r="11" fill="#20a5a7"/>
+  <path d="M183 526 v-19 q0-12 17-12 q17 0 17 12 v19z" fill="#20a5a7"/>
+
+  <!-- Company C -->
+  <rect x="55" y="566" width="198" height="138" rx="18" fill="url(#tenantC)"/>
+  <text x="154" y="602" text-anchor="middle" class="tenantLabel" fill="#6848c6">Company C</text>
+  <circle cx="108" cy="646" r="11" fill="#6848c6"/>
+  <path d="M91 687 v-19 q0-12 17-12 q17 0 17 12 v19z" fill="#6848c6"/>
+  <circle cx="154" cy="637" r="14" fill="#6848c6"/>
+  <path d="M132 687 v-22 q0-15 22-15 q22 0 22 15 v22z" fill="#6848c6"/>
+  <circle cx="200" cy="646" r="11" fill="#6848c6"/>
+  <path d="M183 687 v-19 q0-12 17-12 q17 0 17 12 v19z" fill="#6848c6"/>
+
+  <!-- tenant flow join -->
+  <path d="M254 314 H312 Q328 314 328 330 V390" class="flow"/>
+  <path d="M254 475 H328" class="flow"/>
+  <path d="M254 636 H312 Q328 636 328 620 V480" class="flow"/>
+  <path d="M328 405 H372" class="flow" marker-end="url(#arrowBlue)"/>
+
+  <!-- Step 1 -->
+  <circle cx="390" cy="240" r="22" fill="#1464d2"/>
+  <text x="390" y="249" text-anchor="middle" class="stepnum">1</text>
+  <text x="425" y="244" class="steptext">
+    <tspan x="425" dy="0">Users authenticate</tspan>
+    <tspan x="425" dy="24">through SSO</tspan>
+  </text>
+
+  <rect x="382" y="315" width="175" height="220" rx="16" class="outlineBlue" filter="url(#shadow)"/>
+  <!-- shield icon -->
+  <path d="M470 340 L512 358 V394 Q512 432 470 452 Q428 432 428 394 V358 Z" fill="#2f6fc9"/>
+  <path d="M470 351 L501 364 V393 Q501 419 470 436 Q439 419 439 393 V364 Z" fill="#5a91db"/>
+  <circle cx="470" cy="383" r="13" fill="#ffffff"/>
+  <path d="M450 417 v-10 q0-16 20-16 q20 0 20 16 v10z" fill="#ffffff"/>
+  <text x="470" y="478" text-anchor="middle" class="boxlabel">
+    <tspan x="470" dy="0">SSO / Identity</tspan>
+    <tspan x="470" dy="26">Provider</tspan>
+  </text>
+  <text x="470" y="522" text-anchor="middle" class="small">(IdP)</text>
+
+  <!-- Step 2 -->
+  <circle cx="620" cy="240" r="22" fill="#1464d2"/>
+  <text x="620" y="249" text-anchor="middle" class="stepnum">2</text>
+  <text x="655" y="244" class="steptext">
+    <tspan x="655" dy="0">API Gateway</tspan>
+    <tspan x="655" dy="24">validates tokens</tspan>
+  </text>
+
+  <rect x="615" y="315" width="170" height="220" rx="16" class="outlineTeal" filter="url(#shadow)"/>
+  <!-- gateway icon -->
+  <path d="M682 360 L710 378 V426 L682 444 Z" fill="#11a0a4"/>
+  <path d="M718 378 L746 360 V444 L718 426 Z" fill="#0b8d91"/>
+  <path d="M648 389 H676 M648 402 H676 M648 415 H676 M752 389 H780 M752 402 H780 M752 415 H780"
+        stroke="#11a0a4" stroke-width="4" stroke-linecap="round" stroke-dasharray="2 8"/>
+  <text x="700" y="488" text-anchor="middle" class="boxlabel">API Gateway</text>
+
+  <!-- Arrow 1 -> 2 -->
+  <path d="M557 425 H605" class="flow" marker-end="url(#arrowBlue)"/>
+
+  <!-- Step 3 -->
+  <circle cx="840" cy="240" r="22" fill="#1464d2"/>
+  <text x="840" y="249" text-anchor="middle" class="stepnum">3</text>
+  <text x="875" y="236" class="steptext">
+    <tspan x="875" dy="0">Reporting Service</tspan>
+    <tspan x="875" dy="24">handles export</tspan>
+    <tspan x="875" dy="24">requests</tspan>
+  </text>
+
+  <rect x="848" y="315" width="170" height="220" rx="16" class="outlineBlue" filter="url(#shadow)"/>
+  <!-- report document icon -->
+  <path d="M896 356 H957 L982 381 V443 H896 Z" fill="#ffffff" stroke="#123d7a" stroke-width="4"/>
+  <path d="M957 356 V381 H982" fill="none" stroke="#123d7a" stroke-width="4"/>
+  <rect x="915" y="414" width="12" height="24" fill="#2f6fc9"/>
+  <rect x="935" y="398" width="12" height="40" fill="#2f6fc9"/>
+  <rect x="955" y="382" width="12" height="56" fill="#2f6fc9"/>
+  <text x="933" y="484" text-anchor="middle" class="boxlabel">
+    <tspan x="933" dy="0">Reporting</tspan>
+    <tspan x="933" dy="26">Service</tspan>
+  </text>
+
+  <!-- Arrow 2 -> 3 -->
+  <path d="M785 425 H838" class="flow" marker-end="url(#arrowBlue)"/>
+
+  <!-- Step 4 -->
+  <circle cx="1060" cy="240" r="22" fill="#1464d2"/>
+  <text x="1060" y="249" text-anchor="middle" class="stepnum">4</text>
+  <text x="1095" y="244" class="steptext">
+    <tspan x="1095" dy="0">Background Worker</tspan>
+    <tspan x="1095" dy="24">generates files</tspan>
+  </text>
+
+  <rect x="1080" y="315" width="170" height="220" rx="16" class="outlineBlue" filter="url(#shadow)"/>
+  <!-- gear icon -->
+  <g transform="translate(1165 395)">
+    <circle r="26" fill="none" stroke="#2f6fc9" stroke-width="15"/>
+    <circle r="12" fill="#ffffff"/>
+    <g fill="#2f6fc9">
+      <rect x="-7" y="-48" width="14" height="20" rx="3"/>
+      <rect x="-7" y="28" width="14" height="20" rx="3"/>
+      <rect x="-48" y="-7" width="20" height="14" rx="3"/>
+      <rect x="28" y="-7" width="20" height="14" rx="3"/>
+      <rect x="-39" y="-39" width="16" height="16" rx="3" transform="rotate(45 -31 -31)"/>
+      <rect x="23" y="23" width="16" height="16" rx="3" transform="rotate(45 31 31)"/>
+      <rect x="-39" y="23" width="16" height="16" rx="3" transform="rotate(-45 -31 31)"/>
+      <rect x="23" y="-39" width="16" height="16" rx="3" transform="rotate(-45 31 -31)"/>
+    </g>
+  </g>
+  <text x="1165" y="488" text-anchor="middle" class="boxlabel">Worker</text>
+
+  <!-- Arrow 3 -> 4 -->
+  <path d="M1018 425 H1070" class="flow" marker-end="url(#arrowBlue)"/>
+
+  <!-- Step 5 -->
+  <circle cx="1290" cy="240" r="22" fill="#1464d2"/>
+  <text x="1290" y="249" text-anchor="middle" class="stepnum">5</text>
+  <text x="1325" y="234" class="steptext">
+    <tspan x="1325" dy="0">Service Account accesses</tspan>
+    <tspan x="1325" dy="24">storage to generate and</tspan>
+    <tspan x="1325" dy="24">publish reports</tspan>
+  </text>
+
+  <rect x="1335" y="315" width="180" height="165" rx="16" class="outlineTeal" filter="url(#shadow)"/>
+  <!-- service account icon -->
+  <circle cx="1425" cy="372" r="44" fill="#d8f3f0"/>
+  <circle cx="1425" cy="359" r="14" fill="#0b8d91"/>
+  <path d="M1400 404 v-12 q0-18 25-18 q25 0 25 18 v12z" fill="#0b8d91"/>
+  <circle cx="1461" cy="395" r="12" fill="#0b8d91"/>
+  <rect x="1471" y="392" width="24" height="7" rx="3.5" fill="#0b8d91"/>
+  <rect x="1485" y="399" width="6" height="9" fill="#0b8d91"/>
+  <text x="1425" y="452" text-anchor="middle" class="boxlabel" fill="#0b8d91">Service Account</text>
+
+  <!-- Arrow 4 -> 5 -->
+  <path d="M1250 425 H1325" class="flow" marker-end="url(#arrowBlue)"/>
+
+  <!-- Storage -->
+  <rect x="1310" y="540" width="250" height="205" rx="16" class="outlineTeal" filter="url(#shadow)"/>
+  <text x="1435" y="582" text-anchor="middle" class="boxlabel" fill="#0b6d75">
+    <tspan x="1435" dy="0">Cloud Storage /</tspan>
+    <tspan x="1435" dy="28">Report Storage</tspan>
+  </text>
+  <!-- cloud icon -->
+  <g transform="translate(1435 655)">
+    <circle cx="-32" cy="8" r="27" fill="#0b8d91"/>
+    <circle cx="0" cy="-12" r="39" fill="#0b8d91"/>
+    <circle cx="33" cy="10" r="25" fill="#0b8d91"/>
+    <rect x="-35" y="5" width="70" height="34" rx="17" fill="#0b8d91"/>
+    <rect x="-12" y="-15" width="28" height="42" rx="4" fill="#ffffff"/>
+    <line x1="-5" y1="-4" x2="9" y2="-4" stroke="#0b8d91" stroke-width="3"/>
+    <line x1="-5" y1="4" x2="9" y2="4" stroke="#0b8d91" stroke-width="3"/>
+    <line x1="-5" y1="12" x2="6" y2="12" stroke="#0b8d91" stroke-width="3"/>
+  </g>
+  <text x="1435" y="726" text-anchor="middle" class="small">Reports (CSV, PDF, XLSX, etc.)</text>
+
+  <path d="M1425 480 V528" class="flowTeal" marker-end="url(#arrowTeal)"/>
+
+  <!-- Step 6 and signed URL return path -->
+  <circle cx="690" cy="628" r="22" fill="#1464d2"/>
+  <text x="690" y="637" text-anchor="middle" class="stepnum">6</text>
+  <text x="725" y="624" class="steptext">
+    <tspan x="725" dy="0">Files become available</tspan>
+    <tspan x="725" dy="24">through signed URLs</tspan>
+  </text>
+
+  <path d="M1310 700 H695 H310 V714 H255" class="returnFlow" marker-end="url(#arrowBlue)"/>
+
+  <rect x="690" y="688" width="205" height="50" rx="14" fill="#ffffff" stroke="#1464d2" stroke-width="2.2"/>
+  <!-- link icon -->
+  <g transform="translate(727 713)" fill="none" stroke="#1464d2" stroke-width="4" stroke-linecap="round">
+    <path d="M-12 5 L-3 -4 Q4 -11 11 -4 Q18 3 11 10 L4 17"/>
+    <path d="M12 -5 L3 4 Q-4 11 -11 4 Q-18 -3 -11 -10 L-4 -17"/>
+  </g>
+  <text x="805" y="720" text-anchor="middle" class="boxlabel" fill="#1464d2">Signed URLs</text>
+
+  <!-- bottom callout -->
+  <rect x="540" y="795" width="520" height="78" rx="15" fill="#f1f6ff" stroke="#9cc0f5" stroke-width="2"/>
+  <circle cx="595" cy="834" r="24" fill="#1464d2"/>
+  <path d="M583 834 L592 843 L608 823" fill="none" stroke="#ffffff" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="650" y="844" class="note">The flow seems reasonable.</text>
+</svg>
