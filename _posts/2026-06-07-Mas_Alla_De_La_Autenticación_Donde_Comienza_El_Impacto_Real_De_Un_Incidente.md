@@ -20,14 +20,7 @@ La pregunta más importante suele ser qué puede hacer una identidad válida una
 
 Ahí es donde la autorización se convierte en el verdadero límite del impacto.
 
-<figure class="post-image post-image-wide">
-  <img
-    src="{{ '/assets/img/valid-identity-impact-path-clean.svg' | relative_url }}"
-    alt="Path from valid identity to incident impact through authority and delegation"
-    loading="lazy"
-  >
-  <figcaption>A valid identity is only the starting point. The real impact depends on how far its authority can propagate.</figcaption>
-</figure>
+
 
 ## El incidente no termina con el acceso
 
@@ -98,14 +91,7 @@ La autenticación crea un contexto de identidad.
 
 La autorización debe decidir hasta dónde puede propagarse ese contexto y qué autoridad puede ejercer.
 
-<figure class="post-image post-image-wide">
-  <img
-    src="{{ '/assets/img/authorization-checkpoints-balanced.svg' | relative_url }}"
-    alt="Authorization checkpoints across request, service, job, data, and download stages"
-    loading="lazy"
-  >
-  <figcaption>Authorization should be checked across the full execution path, not only at the first request.</figcaption>
-</figure>
+
 
 ## El problema de las pruebas ofensivas centradas en el login
 
@@ -348,14 +334,6 @@ Son señales de abuso de autorización.
 
 Si un sistema no puede observar cómo se usa la autoridad, difícilmente puede detectar cuándo el acceso legítimo se vuelve malicioso.
 
-<figure class="post-image post-image-wide">
-  <img
-    src="{{ '/assets/img/authority-abuse-detection-model.svg' | relative_url }}"
-    alt="Authority abuse detection model showing suspicious signals from valid identity usage"
-    loading="lazy"
-  >
-  <figcaption>Even when authentication looks normal, the way authority is used can reveal abuse.</figcaption>
-</figure>
 
 Esa es una de las razones por las que seguridad ofensiva, CTI, detection engineering y gestión de riesgos no deberían operar como disciplinas aisladas.
 
@@ -394,14 +372,7 @@ Obliga a inspeccionar:
 - lógica de detección
 - modos de falla
 
-<figure class="post-image post-image-wide">
-  <img
-    src="{{ '/assets/img/authority-review-model.svg' | relative_url }}"
-    alt="Authority review model: create, propagate, constrain, observe, and revoke authority"
-    loading="lazy"
-  >
-  <figcaption>A mature review looks at how authority is created, propagated, constrained, observed, and revoked.</figcaption>
-</figure>
+
 
 Aquí es donde las revisiones senior se diferencian de las pruebas basadas en herramientas.
 
@@ -413,14 +384,7 @@ El objetivo es entender cómo falla el sistema bajo uso adversarial.
 
 Al analizar un incidente, puede ser útil separar tres capas.
 
-<figure class="post-image post-image-wide">
-  <img
-    src="{{ '/assets/img/incident-analysis-three-layers.svg' | relative_url }}"
-    alt="Three layers of incident analysis: identity acquisition, authority expansion, and impact realization"
-    loading="lazy"
-  >
-  <figcaption>Incident impact is easier to understand when identity acquisition, authority expansion, and impact realization are separated.</figcaption>
-</figure>
+
 
 Primero: adquisición de identidad.
 
@@ -507,14 +471,7 @@ La arquitectura es relativamente común:
 
 El flujo parece razonable.
 
-<figure class="post-image post-image-wide">
-  <img
-    src="{{ '/assets/img/saas-export-context-risk-fixed.svg' | relative_url }}"
-    alt="Multi-tenant SaaS export flow where context loss can expose another tenant's data"
-    loading="lazy"
-  >
-  <figcaption>In asynchronous workflows, the original user context can weaken or disappear while service-level authority continues execution.</figcaption>
-</figure>
+
 
 Un usuario autenticado solicita la exportación de un reporte.
 
