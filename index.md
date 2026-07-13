@@ -3,7 +3,7 @@ layout: default
 title: Home
 ---
 
-# InnerShell Labs
+# Innershell Labs
 
 Independent security research focused on offensive security, cyber threat intelligence, malware analysis, risk management, and security engineering.
 
