@@ -253,7 +253,7 @@ A system can have a small API surface and a large authorization surface.
     alt="Authorization checkpoints across request, service, job, data, and download stages"
     loading="lazy"
   >
-  <figcaption>Authorization should be checked across the full execution path, not only at the first request.</figcaption>
+  <figcaption>large authorization surface examples.</figcaption>
 </figure>
 
 This is especially true in distributed environments, where a single request can trigger multiple internal actions.
@@ -360,7 +360,7 @@ They are signals of authorization abuse.
     alt="Access Control Detection Radius"
     loading="lazy"
   >
-  <figcaption>In asynchronous workflows, the original user context can weaken or disappear while service-level authority continues execution.</figcaption>
+  <figcaption>access control as a detection and response problem</figcaption>
 </figure>
 
 If a system cannot observe how authority is being used, it can hardly detect when legitimate access becomes malicious.
