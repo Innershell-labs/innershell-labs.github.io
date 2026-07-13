@@ -21,7 +21,7 @@ The more important question is often what a valid identity can do once the syste
 That is where authorization becomes the real boundary of impact.
 <figure class="post-image post-image-wide">
   <img
-    src="{{ '/assets/img/valid-identity-impact-path-clean.svg' | relative_url }}"
+    src="{{ '/assets/img/authentication-to-authorization-boundary.svg' | relative_url }}"
     alt="Path from valid identity to incident impact through authority and delegation"
     loading="lazy"
   >
@@ -99,7 +99,7 @@ Authorization must decide how far that context is allowed to propagate and what 
 
 <figure class="post-image post-image-wide">
   <img
-    src="{{ '/assets/img/authorization-checkpoints-balanced.svg' | relative_url }}"
+    src="{{ '/assets/img/authorization-blast-radius-clean.svg' | relative_url }}"
     alt="Authorization checkpoints across request, service, job, data, and download stages"
     loading="lazy"
   >
@@ -247,6 +247,15 @@ That includes:
 
 A system can have a small API surface and a large authorization surface.
 
+<figure class="post-image post-image-wide">
+  <img
+    src="{{ '/assets/img/authorization-surface-vs-api-surface.svg' | relative_url }}"
+    alt="Authorization checkpoints across request, service, job, data, and download stages"
+    loading="lazy"
+  >
+  <figcaption>Authorization should be checked across the full execution path, not only at the first request.</figcaption>
+</figure>
+
 This is especially true in distributed environments, where a single request can trigger multiple internal actions.
 
 For example:
@@ -345,16 +354,16 @@ These are not always authentication failures.
 
 They are signals of authorization abuse.
 
-If a system cannot observe how authority is being used, it can hardly detect when legitimate access becomes malicious.
-
 <figure class="post-image post-image-wide">
   <img
-    src="{{ '/assets/img/authority-abuse-detection-model.svg' | relative_url }}"
-    alt="Authority abuse detection model showing suspicious signals from valid identity usage"
+    src="{{ '/assets/img/access-control-radius.png' | relative_url }}"
+    alt="Access Control Detection Radius"
     loading="lazy"
   >
-  <figcaption>Even when authentication looks normal, the way authority is used can reveal abuse.</figcaption>
+  <figcaption>In asynchronous workflows, the original user context can weaken or disappear while service-level authority continues execution.</figcaption>
 </figure>
+
+If a system cannot observe how authority is being used, it can hardly detect when legitimate access becomes malicious.
 
 That is one reason why offensive security, CTI, detection engineering, and risk management should not operate as isolated disciplines.
 
@@ -393,15 +402,6 @@ It forces you to inspect:
 - detection logic
 - failure modes
 
-<figure class="post-image post-image-wide">
-  <img
-    src="{{ '/assets/img/authority-review-model.svg' | relative_url }}"
-    alt="Authority review model: create, propagate, constrain, observe, and revoke authority"
-    loading="lazy"
-  >
-  <figcaption>A mature review looks at how authority is created, propagated, constrained, observed, and revoked.</figcaption>
-</figure>
-
 This is where senior reviews differ from tool-driven testing.
 
 The objective is not to accumulate findings.
@@ -412,14 +412,6 @@ The objective is to understand how the system fails under adversarial use.
 
 When analyzing an incident, it can be useful to separate three layers.
 
-<figure class="post-image post-image-wide">
-  <img
-    src="{{ '/assets/img/incident-analysis-three-layers.svg' | relative_url }}"
-    alt="Three layers of incident analysis: identity acquisition, authority expansion, and impact realization"
-    loading="lazy"
-  >
-  <figcaption>Incident impact is easier to understand when identity acquisition, authority expansion, and impact realization are separated.</figcaption>
-</figure>
 
 First: identity acquisition.
 
@@ -508,7 +500,7 @@ The flow seems reasonable.
 
 <figure class="post-image post-image-wide">
   <img
-    src="{{ '/assets/img/saas-export-context-risk-fixed.svg' | relative_url }}"
+    src="{{ '/assets/img/simulated_scenario_saas_architecture.svg' | relative_url }}"
     alt="Multi-tenant SaaS export flow where context loss can expose another tenant's data"
     loading="lazy"
   >
