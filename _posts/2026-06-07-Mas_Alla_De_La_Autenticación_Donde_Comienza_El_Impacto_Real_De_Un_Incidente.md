@@ -20,7 +20,14 @@ La pregunta más importante suele ser qué puede hacer una identidad válida una
 
 Ahí es donde la autorización se convierte en el verdadero límite del impacto.
 
-
+<figure class="post-image post-image-wide">
+  <img
+    src="{{ '/assets/img/authentication-to-authorization-boundary.svg' | relative_url }}"
+    alt="Path from valid identity to incident impact through authority and delegation"
+    loading="lazy"
+  >
+  <figcaption>A valid identity is only the starting point. The real impact depends on how far its authority can propagate.</figcaption>
+</figure>
 
 ## El incidente no termina con el acceso
 
@@ -91,7 +98,14 @@ La autenticación crea un contexto de identidad.
 
 La autorización debe decidir hasta dónde puede propagarse ese contexto y qué autoridad puede ejercer.
 
-
+<figure class="post-image post-image-wide">
+  <img
+    src="{{ '/assets/img/authorization-blast-radius-clean.svg' | relative_url }}"
+    alt="Authorization checkpoints across request, service, job, data, and download stages"
+    loading="lazy"
+  >
+  <figcaption>Authorization should be checked across the full execution path, not only at the first request.</figcaption>
+</figure>
 
 ## El problema de las pruebas ofensivas centradas en el login
 
@@ -234,6 +248,15 @@ Eso incluye:
 
 Un sistema puede tener una superficie de API pequeña y una superficie de autorización grande.
 
+<figure class="post-image post-image-wide">
+  <img
+    src="{{ '/assets/img/authorization-surface-vs-api-surface.svg' | relative_url }}"
+    alt="Authorization checkpoints across request, service, job, data, and download stages"
+    loading="lazy"
+  >
+  <figcaption>large authorization surface examples.</figcaption>
+</figure>
+
 Esto es especialmente cierto en entornos distribuidos, donde una sola solicitud puede activar múltiples acciones internas.
 
 Por ejemplo:
@@ -331,6 +354,15 @@ Ejemplos:
 Estos no siempre son fallos de autenticación.
 
 Son señales de abuso de autorización.
+
+<figure class="post-image post-image-wide">
+  <img
+    src="{{ '/assets/img/access-control-radius.png' | relative_url }}"
+    alt="Access Control Detection Radius"
+    loading="lazy"
+  >
+  <figcaption>access control as a detection and response problem</figcaption>
+</figure>
 
 Si un sistema no puede observar cómo se usa la autoridad, difícilmente puede detectar cuándo el acceso legítimo se vuelve malicioso.
 
@@ -471,7 +503,14 @@ La arquitectura es relativamente común:
 
 El flujo parece razonable.
 
-
+<figure class="post-image post-image-wide">
+  <img
+    src="{{ '/assets/img/simulated_scenario_saas_architecture.svg' | relative_url }}"
+    alt="Multi-tenant SaaS export flow where context loss can expose another tenant's data"
+    loading="lazy"
+  >
+  <figcaption>In asynchronous workflows, the original user context can weaken or disappear while service-level authority continues execution.</figcaption>
+</figure>
 
 Un usuario autenticado solicita la exportación de un reporte.
 
