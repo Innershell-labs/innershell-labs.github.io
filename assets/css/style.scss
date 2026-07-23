@@ -404,7 +404,7 @@ a:hover {
 
 .prose strong {
   color: var(--ink);
-  font-weight: 850;
+  font-weight: 700;
 }
 
 .prose a {
@@ -436,7 +436,7 @@ a:hover {
 .prose blockquote p {
   margin: 0;
   color: var(--ink);
-  font-size: clamp(20px, 2vw, 25px);
+  font-size: clamp(20px, 2vw, 15px);
   line-height: 1.5;
 }
 
