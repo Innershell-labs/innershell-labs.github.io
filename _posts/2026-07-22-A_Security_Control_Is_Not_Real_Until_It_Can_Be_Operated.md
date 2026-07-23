@@ -22,7 +22,7 @@ lang : en
     alt="Authorization checkpoints across request, service, job, data, and download stages"
     loading="lazy"
   >
-  <figcaption>Authorization should be checked across the full execution path, not only at the first request.</figcaption>
+  <figcaption>A security mechanism becomes a control only when it is supported by ownership, telemetry, validation, recovery and measurable outcomes.</figcaption>
 </figure>
 
 Organizations often describe their security posture through inventories: identity controls, endpoint agents, SIEM rules, hardening baselines, patching tools, data loss prevention, privileged access management and dozens of policies. The inventory may be accurate, yet it can still create a misleading impression. A component may exist while the capability it is supposed to create does not.
@@ -84,7 +84,7 @@ The same pattern applies to authorization, endpoint protection, cloud guardrails
     alt="Authorization checkpoints across request, service, job, data, and download stages"
     loading="lazy"
   >
-  <figcaption>Authorization should be checked across the full execution path, not only at the first request.</figcaption>
+  <figcaption>Security effectiveness depends on the complete chain—from threat and objective to enforcement, operation, evidence and recovery.</figcaption>
 </figure>
 
 ### The control chain
@@ -166,7 +166,7 @@ Metrics must connect deployment and health to security outcomes. Counting rules,
     alt="Authorization checkpoints across request, service, job, data, and download stages"
     loading="lazy"
   >
-  <figcaption>Authorization should be checked across the full execution path, not only at the first request.</figcaption>
+  <figcaption>Healthy dashboards can coexist with viable attack paths when coverage, dependencies and real-world outcomes are not validated.</figcaption>
 </figure>
 
 ## 4. Five realistic failure scenarios
@@ -265,7 +265,7 @@ Control degradation is usually gradual. It rarely appears as a single catastroph
     alt="Authorization checkpoints across request, service, job, data, and download stages"
     loading="lazy"
   >
-  <figcaption>Authorization should be checked across the full execution path, not only at the first request.</figcaption>
+  <figcaption>A configuration may remain unchanged while architecture, trust relationships and threat conditions make the control ineffective.</figcaption>
 </figure>
 
 Configuration drift is visible when the deployed state diverges from a baseline. Control drift is broader. The configuration may remain identical while the environment around it changes enough to make the control ineffective.
@@ -314,7 +314,7 @@ The mature question is therefore not simply whether a control should fail open o
     alt="Authorization checkpoints across request, service, job, data, and download stages"
     loading="lazy"
   >
-  <figcaption>Authorization should be checked across the full execution path, not only at the first request.</figcaption>
+  <figcaption>Resilient controls preserve critical security properties during failure and restore normal operation without creating unmanaged bypasses.</figcaption>
 </figure>
 
 ### Rollback is part of the security design
@@ -345,7 +345,7 @@ A control dashboard can be accurate and still produce the wrong executive conclu
     alt="Authorization checkpoints across request, service, job, data, and download stages"
     loading="lazy"
   >
-  <figcaption>Authorization should be checked across the full execution path, not only at the first request.</figcaption>
+  <figcaption>Deployment proves presence; risk-weighted coverage, integrity, efficacy and residual-risk analysis provide stronger evidence of actual security.</figcaption>
 </figure>
 
 The layers should not be collapsed. A control can have high deployment and low coverage, high coverage and poor health, strong health and weak policy integrity, or correct policy with low efficacy against the current threat scenario.
