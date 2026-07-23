@@ -1,10 +1,10 @@
 ---
 layout: default
-title: "Un Control de Seguridad No Es Real Hasta Que Pueda Operarse"
+title: "Un control de seguridad no es real hasta que pueda operarse"
 lang : es
 ---
 
-# Un Control de Seguridad No Es Real Hasta Que Pueda Operarse
+# Un control de seguridad no es real hasta que pueda operarse
 
 *Por qué el despliegue, la observabilidad, la responsabilidad, la recuperación y la validación determinan si la seguridad existe más allá de las políticas y las herramientas.*
 
