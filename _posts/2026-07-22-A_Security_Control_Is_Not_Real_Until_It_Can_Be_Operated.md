@@ -16,6 +16,15 @@ lang : en
 >
 > **A security control is not the mechanism an organization bought, configured or documented. It is the capability the organization can reliably deploy, observe, maintain, test, recover and govern under real operating conditions.**
 
+<figure class="post-image post-image-wide">
+  <img
+    src="{{ '/assets/img/1-visible-control.png' | relative_url }}"
+    alt="Authorization checkpoints across request, service, job, data, and download stages"
+    loading="lazy"
+  >
+  <figcaption>Authorization should be checked across the full execution path, not only at the first request.</figcaption>
+</figure>
+
 Organizations often describe their security posture through inventories: identity controls, endpoint agents, SIEM rules, hardening baselines, patching tools, data loss prevention, privileged access management and dozens of policies. The inventory may be accurate, yet it can still create a misleading impression. A component may exist while the capability it is supposed to create does not.
 
 A policy can be correct but unenforced. A configuration can be deployed but gradually drift. An endpoint agent can be installed but unhealthy. A detection can exist but depend on telemetry that is incomplete. A patch can be available but operationally impossible to deploy to the assets that matter most. A security platform can report impressive coverage while silently excluding the systems that carry the greatest business risk.
@@ -68,6 +77,15 @@ Security controls are often discussed as isolated mechanisms: a rule, agent, pol
 Consider application allowlisting. The enforcement component may be a policy engine in the operating system. But the actual control includes software inventory, certificate trust, packaging workflows, exception handling, update channels, help desk procedures, emergency bypass, policy distribution, compatibility testing, endpoint health, audit data and a process for identifying drift. If any of these elements fails, the control may become unavailable, ineffective or operationally intolerable.
 
 The same pattern applies to authorization, endpoint protection, cloud guardrails, patching, detection rules, data controls and phishing-resistant authentication. The enforcement point is only one component. The control is the entire chain that makes the enforcement reliable and sustainable.
+
+<figure class="post-image post-image-wide">
+  <img
+    src="{{ '/assets/img/2-control-chain.png' | relative_url }}"
+    alt="Authorization checkpoints across request, service, job, data, and download stages"
+    loading="lazy"
+  >
+  <figcaption>Authorization should be checked across the full execution path, not only at the first request.</figcaption>
+</figure>
 
 ### The control chain
 
@@ -141,6 +159,15 @@ Metrics must connect deployment and health to security outcomes. Counting rules,
 > **OPERATIONAL STANDARD**
 >
 > **If a control cannot be deployed consistently, observed continuously, supported operationally, challenged realistically and recovered safely, its security value is conditional - and that condition should be visible to risk owners.**
+
+<figure class="post-image post-image-wide">
+  <img
+    src="{{ '/assets/img/3-reported-state.png' | relative_url }}"
+    alt="Authorization checkpoints across request, service, job, data, and download stages"
+    loading="lazy"
+  >
+  <figcaption>Authorization should be checked across the full execution path, not only at the first request.</figcaption>
+</figure>
 
 ## 4. Five realistic failure scenarios
 
@@ -232,6 +259,15 @@ Control degradation is usually gradual. It rarely appears as a single catastroph
 
 ### Configuration drift is only one form of control drift
 
+<figure class="post-image post-image-wide">
+  <img
+    src="{{ '/assets/img/4-drift.png' | relative_url }}"
+    alt="Authorization checkpoints across request, service, job, data, and download stages"
+    loading="lazy"
+  >
+  <figcaption>Authorization should be checked across the full execution path, not only at the first request.</figcaption>
+</figure>
+
 Configuration drift is visible when the deployed state diverges from a baseline. Control drift is broader. The configuration may remain identical while the environment around it changes enough to make the control ineffective.
 
 A network rule may still block the same ports, but workloads have moved to a managed service that uses a different path. A detection may still match the same pattern, but the adversary now achieves the objective through an API. An authorization policy may be unchanged, but a new service begins trusting propagated claims that were never intended to cross that boundary.
@@ -272,6 +308,15 @@ The mature question is therefore not simply whether a control should fail open o
 
 - How is normal operation restored without creating a new bypass?
 
+<figure class="post-image post-image-wide">
+  <img
+    src="{{ '/assets/img/5-control-states.png' | relative_url }}"
+    alt="Authorization checkpoints across request, service, job, data, and download stages"
+    loading="lazy"
+  >
+  <figcaption>Authorization should be checked across the full execution path, not only at the first request.</figcaption>
+</figure>
+
 ### Rollback is part of the security design
 
 Security teams sometimes treat rollback as a delivery concern rather than a control property. This creates a predictable outcome: high-impact security changes are delayed because engineering teams do not trust the recovery path, or emergency bypasses are created outside the design when problems occur.
@@ -292,6 +337,16 @@ A control dashboard can be accurate and still produce the wrong executive conclu
 | **Friction** | What operational cost or bypass pressure does the control create? | Exception requests, user bypass attempts, deployment failures and support burden. |
 | **Recovery** | Can the organization restore the control after failure or change? | Time to detect degradation and return to the defined operating state. |
 | **Residual risk** | Which material scenarios remain possible despite the control? | Attack paths that remain viable after current coverage, exceptions and compensating controls. |
+
+
+<figure class="post-image post-image-wide">
+  <img
+    src="{{ '/assets/img/6-control-stack.png' | relative_url }}"
+    alt="Authorization checkpoints across request, service, job, data, and download stages"
+    loading="lazy"
+  >
+  <figcaption>Authorization should be checked across the full execution path, not only at the first request.</figcaption>
+</figure>
 
 The layers should not be collapsed. A control can have high deployment and low coverage, high coverage and poor health, strong health and weak policy integrity, or correct policy with low efficacy against the current threat scenario.
 
