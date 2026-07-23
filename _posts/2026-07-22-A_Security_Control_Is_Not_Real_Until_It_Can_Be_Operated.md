@@ -8,7 +8,7 @@ lang : en
 
 *Why deployment, observability, ownership, recovery and validation determine whether security exists beyond policy and tooling.*
 
-**Diego Concha  |  InnerShell Labs**
+**Diego Concha, InnerShell Labs**
 
 ## Executive premise
 
