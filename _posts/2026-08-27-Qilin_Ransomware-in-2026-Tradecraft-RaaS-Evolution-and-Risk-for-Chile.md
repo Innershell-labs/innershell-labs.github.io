@@ -1,3 +1,9 @@
+---
+layout: default
+title: "Qilin Ransomware in 2026: Tradecraft, RaaS Evolution, and Risk for Chile"
+lang : en
+---
+
 # Qilin Is Not Just Ransomware That Encrypts at the End
 
 *Analyzing Qilin only as a ransomware family leads us to focus on the most visible phase of the incident and, in many cases, the least useful one for prevention. In 2026, the appropriate unit of analysis is broader: a Ransomware-as-a-Service operation with a core team, heterogeneous affiliates, multiple access paths, legitimate and malicious tooling, capabilities across Windows, Linux, and VMware ESXi, double extortion, and a significant evolution in defense evasion.*
