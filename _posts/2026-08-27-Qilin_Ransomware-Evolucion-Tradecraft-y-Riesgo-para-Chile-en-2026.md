@@ -1,3 +1,9 @@
+---
+layout: default
+title: "Qilin Ransomware: evolución, tradecraft y riesgo para Chile en 2026"
+lang : es
+---
+
 # Qilin no es solamente un ransomware que cifra al final
 
 *Analizar Qilin únicamente como una familia de ransomware conduce a observar la fase más visible del incidente y, en muchos casos, la menos útil para prevenirlo. En 2026, la unidad de análisis adecuada es más amplia: una operación Ransomware-as-a-Service con un núcleo operativo, afiliados heterogéneos, múltiples rutas de acceso, tooling legítimo y malicioso, capacidad sobre Windows, Linux y VMware ESXi, doble extorsión y una evolución relevante en defensa evasiva.*
