@@ -12,7 +12,7 @@ Its public lineage begins in 2022 under the name Agenda. Over time, Qilin became
 
 <figure class="post-image post-image-wide">
   <img
-    src="{{ '/assets/img/QILIN_1' | relative_url }}"
+    src="{{ '/assets/img/QILIN_1.png' | relative_url }}"
     alt="Qilin Ransomware actors"
     loading="lazy"
   >
@@ -57,7 +57,7 @@ The Agenda → Qilin continuity carries high technical confidence, although diff
 
 <figure class="post-image post-image-wide">
   <img
-    src="{{ '/assets/img/QILIN_2' | relative_url }}"
+    src="{{ '/assets/img/QILIN_2.png' | relative_url }}"
     alt="Ransomware-as-a-Service model"
     loading="lazy"
   >
@@ -101,7 +101,7 @@ The Synnovis case shows why this distinction matters. NHS England confirmed that
 
 <figure class="post-image post-image-wide">
   <img
-    src="{{ '/assets/img/QILIN_3' | relative_url }}"
+    src="{{ '/assets/img/QILIN_3.png' | relative_url }}"
     alt="Indicators from the Synnovis/NHS attack"
     loading="lazy"
   >
@@ -120,7 +120,7 @@ This observation changes the way threat hunting should be performed. A binary si
 
 <figure class="post-image post-image-wide">
   <img
-    src="{{ '/assets/img/QILIN_4' | relative_url }}"
+    src="{{ '/assets/img/QILIN_4.png' | relative_url }}"
     alt="Threat hunting based on behaviors and patterns"
     loading="lazy"
   >
@@ -133,7 +133,7 @@ The research finds support for several initial-access paths. Group-IB documented
 
 <figure class="post-image post-image-wide">
   <img
-    src="{{ '/assets/img/QILIN_5' | relative_url }}"
+    src="{{ '/assets/img/QILIN_5.png' | relative_url }}"
     alt="Qilin initial access methods"
     loading="lazy"
   >
@@ -192,7 +192,7 @@ This reinforces another analytical separation: ransomware detection should not b
 
 <figure class="post-image post-image-wide">
   <img
-    src="{{ '/assets/img/QILIN_6' | relative_url }}"
+    src="{{ '/assets/img/QILIN_6.png' | relative_url }}"
     alt="Encryption algorithms used by threat actors"
     loading="lazy"
   >
@@ -211,7 +211,7 @@ For Chilean sectors with high VMware dependency—industry, healthcare, mining, 
 
 <figure class="post-image post-image-wide">
   <img
-    src="{{ '/assets/img/QILIN_7' | relative_url }}"
+    src="{{ '/assets/img/QILIN_7.jpg' | relative_url }}"
     alt="Backup preparation against ransomware"
     loading="lazy"
   >
@@ -272,7 +272,7 @@ In parallel, during 2026 multiple Chilean organizations appeared in trackers rep
 
 <figure class="post-image post-image-wide">
   <img
-    src="{{ '/assets/img/QILIN_8' | relative_url }}"
+    src="{{ '/assets/img/QILIN_8.png' | relative_url }}"
     alt="Latest Qilin victims in Chile"
     loading="lazy"
   >
@@ -303,7 +303,7 @@ The incidents involving the Instituto de Salud Pública and the Subsecretaría d
 
 <figure class="post-image post-image-wide">
   <img
-    src="{{ '/assets/img/QILIN_9' | relative_url }}"
+    src="{{ '/assets/img/QILIN_9.png' | relative_url }}"
     alt="Incident notice by the ISP in Chile"
     loading="lazy"
   >
@@ -343,7 +343,7 @@ It is also reasonable to expect that evolution will occur at least as much in af
 
 <figure class="post-image post-image-wide">
   <img
-    src="{{ '/assets/img/QILIN_10' | relative_url }}"
+    src="{{ '/assets/img/QILIN_10.png' | relative_url }}"
     alt="Description of a CVE used by Qilin Ransomware operators"
     loading="lazy"
   >
