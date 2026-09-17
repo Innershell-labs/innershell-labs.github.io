@@ -1,15 +1,14 @@
 ---
 layout: default
 title: Home
+intro: >-
+  Independent security research focused on offensive security, cyber threat intelligence, malware analysis, risk management, and security engineering.
 ---
-
-# Innershell Labs
-
-Independent security research focused on offensive security, cyber threat intelligence, malware analysis, risk management, and security engineering.
 
 This site explores how modern organizations are exposed, attacked, defended, and impacted by cyber threats across technical and business layers.
 
-Focus Areas
+## Focus areas
+
 - Offensive security and Red Team methodologies
 - Cyber Threat Intelligence and adversary behavior
 - Malware analysis, phishing, ransomware, and malicious infrastructure
@@ -21,11 +20,9 @@ Focus Areas
 
 The goal of this space is to document technical research, field-driven analysis, and practical security thinking derived from real-world offensive security, threat intelligence, and risk management experience.
 
-→ Learn more [About](/about)  
-→ Explore current [Research](/research)  
-→ Read the [Blog](/blog)
+[About]({{ '/about' | relative_url }}) · [Research]({{ '/research' | relative_url }}) · [Blog]({{ '/blog' | relative_url }})
 
 ## Contact
 
-- GitHub: https://github.com/innershell-labs
-- LinkedIn: https://www.linkedin.com/in/diego-concha/
+- [GitHub](https://github.com/innershell-labs)
+- [LinkedIn](https://www.linkedin.com/in/diego-concha/)

@@ -2,11 +2,9 @@
 layout: default
 title: About
 hero_description: Independent security research by Diego Concha, connecting offensive security, malware analysis, CTI, and risk management to understand real-world cyber impact.
+intro: >-
+  InnerShell Labs is an independent security research space authored by Diego Concha, focused on understanding how cyber threats operate, how systems fail, and how technical weaknesses become business risk.
 ---
-
-# About
-
-InnerShell Labs is an independent security research space authored by Diego Concha, focused on understanding how cyber threats operate, how systems fail, and how technical weaknesses become business risk.
 
 My work sits at the intersection of offensive security, Cyber Threat Intelligence, malware analysis, security engineering, and corporate cyber risk. Since 2020, I have worked across offensive security engagements, threat research, incident-driven analysis, and risk-oriented security assessments for organizations across different industries.
 

@@ -2,11 +2,9 @@
 layout: default
 title: Research
 hero_description: Structured analysis of offensive security, malware behavior, cyber threat intelligence, adversary operations, and corporate cyber risk.
+intro: >-
+  This page outlines ongoing and future research directions explored in InnerShell Labs.
 ---
-
-# Research
-
-This page outlines ongoing and future research directions explored in InnerShell Labs.
 
 The focus is on understanding how modern systems behave under adversarial conditions, and how design decisions impact security at both technical and organizational levels.
 

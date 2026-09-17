@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "A Security Control Is Not Real Until It Can Be Operated"
-lang : en
+lang: en
 ---
 
 # A Security Control Is Not Real Until It Can Be Operated

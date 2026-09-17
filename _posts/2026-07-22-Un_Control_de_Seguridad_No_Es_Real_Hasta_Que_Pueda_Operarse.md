@@ -1,7 +1,7 @@
 ---
 layout: default
 title: "Un control de seguridad no es real hasta que pueda operarse"
-lang : es
+lang: es
 ---
 
 # Un control de seguridad no es real hasta que pueda operarse
