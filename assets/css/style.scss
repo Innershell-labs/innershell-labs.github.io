@@ -158,6 +158,9 @@ a:hover { color: var(--accent); }
 .article-body-band { background: var(--surface); }
 .article-body-band .site-shell { padding-block: 42px 72px; }
 .post-content { max-width: var(--article-width); }
+.post-content img {
+  border: 1px solid var(--accent);
+}
 .post-cover { margin: 0 0 38px; }
 .post-cover img { width: auto; height: auto; max-width: 100%; }
 
@@ -239,7 +242,15 @@ a:hover { color: var(--accent); }
   line-height: 1.6;
 }
 .prose pre code { padding: 0; background: transparent; color: inherit; font-size: inherit; overflow-wrap: normal; }
-.prose table { display: block; width: max-content; max-width: 100%; overflow-x: auto; margin: 31px 0; border-collapse: collapse; }
+.prose table {
+  display: block;
+  width: max-content;
+  max-width: 100%;
+  overflow-x: auto;
+  margin: 31px 0;
+  border: 1px solid var(--accent);
+  border-collapse: collapse;
+}
 .prose th, .prose td { min-width: 100px; padding: 10px 13px; border-bottom: 1px solid var(--border); text-align: left; vertical-align: top; }
 .prose th { font-weight: 600; }
 
